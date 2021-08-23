@@ -1,6 +1,6 @@
 package com.example.inventorylists.controller;
 
-import com.example.inventorylists.dao.ItemsDao;
+import com.example.inventorylists.service.ItemsDao;
 import com.example.inventorylists.model.Items;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +12,11 @@ import java.util.*;
 @RestController
 public class AdminController {
     @Autowired ItemsDao itemsDao;
+
+    @RequestMapping("/")
+    public String getWelcomeMessage(){
+        return "Welcome to Vasvamba Stores!";
+    }
 
     @RequestMapping("/sayHello")
     public String sayHello(){

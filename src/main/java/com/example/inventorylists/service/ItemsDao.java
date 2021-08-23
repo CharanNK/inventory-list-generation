@@ -1,4 +1,4 @@
-package com.example.inventorylists.dao;
+package com.example.inventorylists.service;
 
 import com.example.inventorylists.model.Items;
 import org.springframework.data.repository.CrudRepository;
